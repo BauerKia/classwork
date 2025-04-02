@@ -38,6 +38,7 @@ class Program
     static void Main(string[] args)
     {
         // Variable names C# are usually in camelCase
+        //
         // Its always good to initialize variables when defing them so you know what is in them
         
         Console.WriteLine("--- Starting program ---");
@@ -60,11 +61,48 @@ class Program
           // So we need to convert the string from Console.ReadLine() to an int
           num1 = int.Parse(aLine);
           
+          Console.WriteLine("Give me a number: ");
+          aLine = Console.ReadLine();
+          num2 = int.Parse(aLine);
           // Verify that I got the data expected
           // Display some words and the value I received
           //Little pieces + test them!
+          aLine = Console.ReadLine();
+          num3 = int.Parse(aLine);
+          sum = num1 + num2 + num3;
+          Console.WriteLine("You entered: " + sum);
           
-          Console.WriteLine("You entered: " + num1);
+          
+          //alt coding method - Choose the coding style that you like
+          //However you code as you get a correct solution and you understand it, its right
+         //This is not any faster, it just combines multiple steps into one
+          aLine = int.Parse(Console.ReadLine());
+          
+          // Loop throguh our process 3 times
+          //If you know the number of times you want to loop
+          // User a for-loop
+        
+          
+          //syntac of a for loop
+          //            (1)                                 (2a)                                (2b)
+          //       intialization-part           ; loop-codition-part           ; increment
+          // for (int variable = intial-value; variable < #-times-to-loop; variable++){
+          // }
+          
+          // The for-loop is controlled by the variable defined within it:
+          /*
+           *  1.int variable = initial -value -> Initializes the variable (usually to 0)
+           *  2. the condition following thevaraible definition is tested:
+           *        a. if true - perform the process between the {} for the for-loop
+           *            increment the variable according the last part of the loop
+           *            go back to # 2
+           *        b. if false - exit the loop after the closing brace
+           */
+          for (int i = 0; i < 3; i++) // i = 0, 2 inside  the loop - 3 causes it to exit
+          {
+              Console.WriteLine("Please enter a number");
+          }
+
           Console.WriteLine("--- Ending program ---");
     }
 }
