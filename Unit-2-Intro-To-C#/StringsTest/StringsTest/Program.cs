@@ -1,4 +1,4 @@
-﻿namespace String;
+﻿namespace StrinhsTest;
 
 class Program
 {
@@ -59,8 +59,5 @@ class Program
         {
             Console.WriteLine("string1 is NOT equal string2");
         }
-        
-        
-        
     } // End of Main()
 }  // End of class Program
