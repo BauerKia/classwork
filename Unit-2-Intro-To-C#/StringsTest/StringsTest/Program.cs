@@ -59,5 +59,49 @@ class Program
         {
             Console.WriteLine("string1 is NOT equal string2");
         }
+/*
+ *
+ *
+ * 
+ * Some methods that process strings
+ * to see a list of all methods available to an object - just type objectName.
+ * .Length - returns the number of character in a string
+ *  .Contains(string) - returns true if the string given is inside a string
+ *  .Substring(start-index.length) - extract characters
+ *
+ *  .EndsWith(string) - return true if string ends with the specified chars (case-sensitive)
+ *
+ *  .Trim() - remove any leading or trailing spaces ( Useful when getting data from users)
+ */
+
+// 0 123456789  1 123456789 2 123456789 3 123456789 4 1234567
+      
+        
+        string sentence = "   My name is Kiana and I attempt C#   ";
+        Console.WriteLine("There are" + sentence.Length + " characters in the sentence");
+
+        //substring
+        bool containsKiana = sentence.Contains("Kiana"); //true if sentence contains Kiana
+        Console.WriteLine("Does sentence contain Kiana: " + containsKiana);
+        
+        Console.WriteLine("Does sentence start with My " + sentence.StartsWith("My"));
+        Console.WriteLine("Does sentence start with My " + sentence.StartsWith("my"));
+        Console.WriteLine("Does sentence start with My " + sentence.EndsWith("C#"));
+        
+        Console.WriteLine("Results when sentence.Trim() is used to remove leading and trailing spaces");
+        Console.WriteLine("Does sentence start with My " + sentence.Trim().StartsWith("My"));
+        Console.WriteLine("Does sentence start with My " + sentence.Trim().StartsWith("my"));
+        Console.WriteLine("Does sentence start with My " + sentence.Trim().EndsWith("C#"));
+        
+       
+        // When C# sees a statement with Chained Operations (operations separated by dots)
+        // C# is going to process the statement fro mleft to right; one opertation at a time
+        // Uses the result of operation in the next one
+        // sentence.Trim().EndsWith(C#)
+        
+        // 1. sentence.Trim() -return a string with the leading and trailing spaces removed
+        //2.  result-from-step-1.EndsWith() - return true or false depending on if string actually ends with chars 
+        // internal new string
+        
     } // End of Main()
 }  // End of class Program
