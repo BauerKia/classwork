@@ -38,7 +38,30 @@ class Program
                                             //it will return the sum
                                             //which will be stored in the variable mySum
         Console.WriteLine("The sum of 1 and 2 is:" + mySum);
+        Console.WriteLine("The sum of 3 and 4 is:" + Addem(3,4));
         
+        Console.WriteLine("The sum of 3 and 4 is:" + Addem(3.1,4.5));
+        
+        /******************************************************************************
+         * Background information - Data Types, conversion
+         *
+         * Computers can perform two types of arithmetic: integer and floating-point
+         *
+         * The type of arithmetic done depends on the data types of the
+         * values in the operation
+         *
+         * if both are int-type values, integer arithmetic is done
+         * if both are floating-point types, floating-point arithmetic is done
+         * if they one is an int-type and the other a floating-point type,
+         * the int-type is converted to a floating-point type (double)
+         * and floating-point arithmetic is done.
+         *
+         * int-types: int, long, short, uint, ushort, ulong
+         *
+         * floating-point types: float, double, decimal
+         *
+         ***************************************************************************/
+        Console.WriteLine("The sum of 3 and 4 is:" + Addem(3,4.5));
     } // End of Main()
     
     // After a method you may define other methods that method can use
@@ -50,9 +73,23 @@ class Program
     
     // return
     //type name(parameters)
+    
+    // Addem is a method that receives two ints it s calling num1 and num2
+    // and returns the sum of the ints as an int
    static int Addem(int num1, int num2)
     {
+       // Console.WriteLine("Addem(int,int) was called with " + num1 + " " + num2);
         return num1 + num2; // Add the two parameters and return the sum 
 
+    }
+   
+   //return a double
+   static double Addem(double num1, double num2)
+    {
+        // Console.WriteLine("Addem(double,double) was called with " + num1 + " " + num2);
+        return num1 + num2; // Add the two parameters and return the sum 
+        // double + double - the result is a double
+        //return type needs to be double
+        
     }
 }
