@@ -52,16 +52,31 @@ class Program
         
     }
 
-    
-    List<int> numList = new List<int>();
-        for (int i = 0; i < inputNum; i++)
+    static int[] numForward(int num)
     {
-        numList.Add(i);
-    }
+        List<int> numList = new List<int>();
+        for (int i = 0; i < num; i++)
+        {
+            numList.Add(i);
+        }
 
 // You can convert it back to an array if you would like to
-    int[] finalArray = numList.ToArray();
+        int[] finalArray = numList.ToArray();
+        return finalArray;
+    }
+    
+    static int[] numBackward(int num)
+    {
+        List<int> numList = new List<int>();
+        for (int i = num; i = num; i--)
+        {
+            numList.Add(i);
+        }
 
+// You can convert it back to an array if you would like to
+        int[] finalArray = numList.ToArray();
+        return finalArray;
+    }
 
 }
 
