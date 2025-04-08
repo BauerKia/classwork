@@ -53,11 +53,38 @@ class Program
         Console.WriteLine("Welcome Back to Your Humble Abode");
         
         /*
-         * 
+         *  Problem 4
          */
-        
+        int numTimes = 0;
+        do
+        {
+            if (numTimes != 5)
+            {
+                Console.WriteLine("Please enter code: ");
+                inputPW = int.Parse(Console.ReadLine());
+                numTimes = numTimes + 1;
+            }else
+            {
+                Console.WriteLine("Access Not Granted");
+                break;
+            }
+        } while (!unlockDoor(inputPW));
 
+        if (unlockDoor(inputPW))
+        {
+            Console.WriteLine("Welcome Back to Your Humble Abode");
+        }
     }
+
+
+    static bool unlockDoor(int code)
+    {
+        if (code == 13579){
+            return true;
+        }
+        return false;
+    }
+
 
     static void numInLine(int num)
     { 
