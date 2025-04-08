@@ -29,54 +29,57 @@ class Program
         {
             Console.WriteLine("Please Enter a number:");
             int inputNum = int.Parse(Console.ReadLine());
-         //n  Console.WriteLine(lineOfNum(inputNum));
-         int[] newArray = new int[inputNum];
-         int[] newArray2 = new int[inputNum];
-         for (int i = inputNum; i <= inputNum && i !< 0; i--)
-         {
-             newArray[i] =  i;
-             
-         }
-         Console.WriteLine($"{newArray}");
-         for (int i = 0; i <= inputNum && i !> inputNum; i++)
-         {
-             newArray2[i] = i;
-             
-         }
-         Console.WriteLine($"{newArray2}");
+         // call method
+         numInLine(inputNum);
+         
             Console.WriteLine("Would you like to continue (y/n)?");
             newInput = Console.ReadLine();
         } while (newInput == "y");
 
         Console.WriteLine("Goodbye!");
         
+        
+        /*
+         *  Problem 3
+         */
+        int correctPW = 13579;
+        Console.WriteLine("Please enter code: ");
+        int inputPW = int.Parse(Console.ReadLine());
+        while (inputPW != correctPW)
+        {
+            Console.WriteLine("Please enter correct code: ");
+            inputPW = int.Parse(Console.ReadLine());
+        }
+        Console.WriteLine("Welcome Back to Your Humble Abode");
+        
+        /*
+         * 
+         */
+        
+
     }
 
-    static int[] numForward(int num)
-    {
-        List<int> numList = new List<int>();
-        for (int i = 0; i < num; i++)
+    static void numInLine(int num)
+    { 
+        //Trying to get an array to return
+        //or have the console print both there and back numbers  when method is called
+        string one = "";
+        string two = "";
+        for (int i = num; i >= 0; i--)
         {
-            numList.Add(i);
-        }
 
-// You can convert it back to an array if you would like to
-        int[] finalArray = numList.ToArray();
-        return finalArray;
+            one = one + i.ToString();
+        }
+        Console.WriteLine($"{one}");
+        for (int i = 0; i <= num; i++)
+        {
+            two = two + i.ToString(); 
+        }
+        Console.WriteLine($"{two}");
+
     }
     
-    static int[] numBackward(int num)
-    {
-        List<int> numList = new List<int>();
-        for (int i = num; i = num; i--)
-        {
-            numList.Add(i);
-        }
 
-// You can convert it back to an array if you would like to
-        int[] finalArray = numList.ToArray();
-        return finalArray;
-    }
 
 }
 
