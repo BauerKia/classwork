@@ -41,7 +41,7 @@ class Program
     {
         Random rnd = new Random();
         int rDie1 = rnd.Next(1, range1);
-        int rDie2 = rnd.Next(1, range1);
+        int rDie2 = rnd.Next(1, range2);
         int total = rDie1 + rDie2;
 
         return (rDie1, rDie2, total);
