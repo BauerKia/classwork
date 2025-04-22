@@ -4,6 +4,7 @@ using System;                      // Give me access to C# System
 using System.Collections.Generic;  // Give me access to C# Collections stuff
 using System.Linq;                 // Give me access to the LINQ
 
+// REmived the internal attrivute as this is the only program 
 internal class Program
 {
     // Data defined outside of any method (including Main())
@@ -18,6 +19,7 @@ internal class Program
         Console.WriteLine("Welcome to the Linq/Lambda Expression Demo");
 
         // Call a method to load the List that holding our data
+        //Helper methods to help keep it cleaner in the main method
         LoadData();
 
         WriteSeparatorLine("List of People in our List");
@@ -29,9 +31,9 @@ internal class Program
 
         WriteSeparatorLine("Find an Entry");
 
-        while (true)
+        while (true) // Set up a loop forever loop
         {
-            if (!moreInput())
+            if (!moreInput()) //Break out of loop based on a condition 
             {
                 break;
             }
@@ -42,6 +44,7 @@ internal class Program
             // Search the List for matching elements based on user input
             //        using standard C# coding elements
             //
+            // Standard way to search the list
             //int matchCount = 0;
             //         name-of-curr-item in this-list
             //foreach (string anEntry    in starFleetPersonnel)
@@ -69,6 +72,10 @@ internal class Program
             //              from the List that made the condition true
             //
             // Note use of var type to hold the result of .Where()
+            
+            // Put all the entries in starFleetPersonnel  that mathe the condition given 
+            //into the variable called matching entries
+            // .Where() 
 
             var matchingEntries =
                 starFleetPersonnel.Where(anEntry => anEntry.ToLower().Contains(searchString.ToLower()));
@@ -219,7 +226,7 @@ internal class Program
 
         bool getInput = true;   // Control the user interaction loop
 
-        do
+        do //variable controlled loop -- bool variable being set to determine if loop should continue
         {
             // Ask the user if they have any numbers to enter (Y/N)
             Console.WriteLine("\nDo you have any values to enter (Y/N)?");
@@ -231,14 +238,14 @@ internal class Program
 
             if (firstChar == "Y")
             {
-                getInput = false;
+                getInput = false; // set loop control variable to end the loop
                 isThereInput = true;
             }
             else
             {
                 if (firstChar == "N")
                 {
-                    getInput = false;
+                    getInput = false; // set the loop control variable to end loop
                     isThereInput = false;
                 }
             }
