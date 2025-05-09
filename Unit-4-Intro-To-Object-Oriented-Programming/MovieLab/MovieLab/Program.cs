@@ -1,5 +1,5 @@
 ﻿namespace MovieLab;
-
+//Day 3 LINQ 
 class Program
 { 
     static void Main(string[] args){
@@ -39,8 +39,10 @@ class Program
              * Why does try/catch not work?
              * Make another variable to save the movies with the same catagory as the user input in a list from the main movieList
              */
-            List<Movie> sameMovies = movieList.Where(m => m.GetCatagory().ToLower() == input).ToList();
-
+            var sameMovies = movieList.Where(m => m.GetCatagory().ToLower().Contains(input));
+            // Sort the List
+            //var sortList = sameMovies.OrderBy(aline => aline); // No this is a string. Need to morph or add method to Movie?
+            
             if (sameMovies.Any())
             {
                 foreach (var m in sameMovies)
@@ -60,7 +62,9 @@ class Program
             input = Console.ReadLine().ToLower();
 
         } while (input == "y");
-    }
+        
+        
+    }//End of Main
 
     /*
      * Change Movies!
@@ -110,12 +114,6 @@ class Program
         // movies.Add(input) --> Movie input being a parameter? Is this any better than just Add?
         
     }
-/*
- * Adjust set up, does this need to be a method?
- */
-    // static Movie DisplayMovies(List<Movie> movies, string input)
-    // {
-    //     ///Something is here, but I think you can use this below to do a for each throguh the list to only save the correct catagoies.
-    //     
-    // }
+    
+
 }
