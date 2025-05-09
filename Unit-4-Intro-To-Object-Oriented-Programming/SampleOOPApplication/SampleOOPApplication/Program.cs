@@ -6,5 +6,6 @@ class Program
     {
         Console.WriteLine("Hello, World!");
         Person aPerson = new Person("John", 70, 250, "M");
+        Console.WriteLine($"{aPerson}");
     }
 }
