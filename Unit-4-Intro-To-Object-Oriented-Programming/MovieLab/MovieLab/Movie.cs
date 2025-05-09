@@ -3,11 +3,42 @@ namespace MovieLab;
 public class Movie
 {
     // Challenge 3
-    private string title;
-    private string catagory;
-    private double runTime;
-    private int yearReleased;
-}
+    private string _title;
+    private string _catagory;
+    private int _runTime;
+    private int _yearReleased;
+    
+
+    //Constructor
+    public Movie(string theTitle, string theCatagory, int theRunTime, int theYearReleased)
+    {
+        this.title = theTitle;
+        this.catagory = theCatagory;
+        this.runTime = theRunTime;
+        this.yearReleased = theYearReleased;
+
+    }
+    
+    //Properties
+    public string title{ get; set;}
+    public string catagory{ get;  set;}
+    public int runTime { get;  set;}
+    public int yearReleased { get; set;}
+    // Methods Behaviors
+
+    public override string ToString()
+    {
+        return $"Title: {title}, Year Released: {yearReleased}, Run Time: {runTime}";
+    }
+
+    public void showMovie()
+    {
+        Console.WriteLine(this);
+    }
+    
+
+} // End of Movie Class
+
 
 
 // findMovies method 
