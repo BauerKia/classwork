@@ -84,7 +84,7 @@ public class Person
   **********************************************************************************/
  public override bool Equals(object? obj)
  {
-     return base.Equals(obj);  // performs default base default
+     return base.Equals(obj);  // performs default base default!!!!!!!
  }
 
  // Override the default GetHashCode method:  public int GetHashCode()
