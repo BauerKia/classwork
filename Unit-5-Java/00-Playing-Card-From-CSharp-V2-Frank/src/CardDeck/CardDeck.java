@@ -6,18 +6,18 @@ package CardDeck; // PackageName name must match teh folder name containing pack
 //     PackageName.Classname;
 import PlayingCard.PlayingCard;  // Give me access to the PlayingCard class stuff
 
-import java.util.*;
+import java.util.ArrayList;      // Give me access to the ArrayList class stuff
+import java.util.Collections;
+import java.util.List;           // Give me access to the List class stuff
+import java.util.Random;         // Give me access to the Random clas stuff
 
 public class CardDeck
 {
     /*************************************************************************************************
 	 * CardDeck has a set of PLayingCards - "has-a" relationship - define the object in the class
 	 ***************************************************************************************************/
-//DANGER: Because we are using an ArrayList some can add a duplicate card to the deck
-	List<PlayingCard> deckOfCards = new ArrayList<PlayingCard>();  // Define a ArrayList to hold PlayingCards
-	//Set<PlayingCard>	deckOfCards = new LinkedHashSet<>(); // Duplicate cards cannot be added to the deck
 
-	//These are things you looks for when you are REFACTORING
+	List<PlayingCard> deckOfCards = new ArrayList<PlayingCard>();  // Define a ArrayList to hold PlayingCards
 
 	/***************************************************************************************************
 	 * Number of non-Joker cards per suit
@@ -172,7 +172,7 @@ public class CardDeck
 	/***************************************************************************************************
 	 * Shuffle existing Card Deck - Short form
 	 ***************************************************************************************************/
-	public void shuffleDeck() {
+	public void shuffleTheDeck() {
 		Collections.shuffle(deckOfCards);
 	}
 
