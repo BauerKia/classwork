@@ -15,7 +15,8 @@ public class Main {
 
         Scanner theKey = new Scanner(System.in);
 
-        System.out.println("Please give me some ice cream flavor options formated as such: flavor1, flavor1, ...");
+        //Suggestion: Chocolate, vanilla
+        System.out.println("Please give me some ice cream flavor options formated as such: flavor1, flavor2, ...");
         String userF = theKey.nextLine().toLowerCase();
         String[] flavParts = userF.split(",");
         List<String> flavList = Arrays.asList(flavParts);
@@ -53,11 +54,6 @@ public class Main {
             }while (realFlav);
             System.out.println(String.format("Thank you for your vote %s!", n));
         }
-
-
-
-
-
     }
 /*
 * Determine the highest vote count from the map values.
