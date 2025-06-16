@@ -10,8 +10,22 @@
  */
 function variables() {
   // Declares a variable where the value cannot be changed
+  const aVariable = 42;
+
+  // Interpolation: words ${variable}  C#: $(words {variable})
+  console.log("")
+
   // Declares a variable those value can be changed
+
+  let itBe = 87.4;
+
+  itBe = 1776
   // Declares a variable that will always be an array
+//You CAN mix data types, becasue there are no data types
+let stuff = ["things", 'Kevin', "Hello", "Howdy", 774.6]
+  console.log('The value in stuff is: ${stuff}')
+  console.log(stuff)
+
 }
 
 /**
