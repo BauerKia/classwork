@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class='bxs  bx-octopus'  ></i>
+                <span>BrandingName</span>
+
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+
+        </div>
+
+        <div class="user">
+
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <!  icon not showing up ->
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item">home</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="about.html">
+                    <i class="bx bx-body"></i>
+                    <span class="nav-item">Learn About Me</span>
+                </a>
+                <span class="tooltip">Learn About Me</span>
+        </li>
+            <li>
+                <a href="portfolio.html">
+                    <!  icon not showing up ->
+                    <i class="bx bx-list-check"></i>
+                    <span class="nav-item">View My Work</span>
+                </a>
+                <span class="tooltip">View My Work</span>
+
+            </li>
+        </ul>
+    </div>
+
+<div class="main-content">
+    <div class="container">
+        <h1>Welcome to K.Bauer</h1>
+    </div>
+
+</div>
+</body>
+
+<script>
+
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function(){
+    sidebar.classList.toggle('active');
+    };
+</script>
+
+</html>
