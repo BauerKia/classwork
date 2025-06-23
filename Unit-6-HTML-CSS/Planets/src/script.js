@@ -80,7 +80,7 @@ if(index >= planets.length) index = planets.length - 1;
 
 document.getElementById("name").textContent = planets[index].name;
 document.getElementById("inner").textContent = planets[index].inner;
-const circle = document.getElementById("visual").textContent;
+const circle = document.getElementById("visual");
 circle.style.backgroundColor = planets[index].color;
 
 const size = planets[index].diameter / 100;
@@ -89,8 +89,9 @@ circle.style.height = size + "px";
 
 document.getElementById("index").textContent = index;
 
+//.disabled is a boolean attribute for the html button
 document.getElementById("previous").disabled = (index === 0);
-document.getElementById("next").textContent = (index === planets.length - 1);
+document.getElementById("next").disabled = (index === planets.length - 1);
 
 
 
