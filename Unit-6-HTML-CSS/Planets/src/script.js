@@ -79,7 +79,13 @@ if( index < 0) index = 0;
 if(index >= planets.length) index = planets.length - 1;
 
 document.getElementById("name").textContent = planets[index].name;
-document.getElementById("inner").textContent = planets[index].inner;
+
+if(planets[index].inner){
+document.getElementById("inner").textContent = "Inner Planet";
+} else{
+document.getElementById("inner").textContent = "Outer Planet";
+
+}
 const circle = document.getElementById("visual");
 circle.style.backgroundColor = planets[index].color;
 
