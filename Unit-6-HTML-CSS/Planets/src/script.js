@@ -86,6 +86,8 @@ document.getElementById("inner").textContent = "Inner Planet";
 document.getElementById("inner").textContent = "Outer Planet";
 
 }
+
+//Had to get help -> get better at switching between typs and making things easier to read
 const circle = document.getElementById("visual");
 circle.style.backgroundColor = planets[index].color;
 
