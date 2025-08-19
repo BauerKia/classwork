@@ -1,0 +1,13 @@
+<div class="sidebar" [class.closed]="isClosed">
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <div class="icon-bar"></div>
+    <div class="icon-bar"></div>
+    <div class="icon-bar"></div>
+  </div>
+
+  <ul>
+    <li #menuItem *ngFor="let item of ['Home', 'About', 'Services', 'Contact']">
+      <a href="#">{{ item }}</a>
+    </li>
+  </ul>
+</div>
